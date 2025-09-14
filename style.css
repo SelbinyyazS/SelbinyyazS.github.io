@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+    --primary-color: #0A2647; /* A deep, professional navy blue */
+    --secondary-color: #144272; /* A slightly lighter blue */
+    --accent-color: #205295; /* An even lighter, active blue */
+    --highlight-color: #2C74B3; /* A vibrant blue for calls to action */
+    --text-color: #EAFDFC; /* A clean, off-white for text */
+    --bg-color: #0A2647; /* Matching the primary for a seamless look */
+}
+
+/* 2. GENERAL & ANIMATION STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Smooth scrolling for nav links */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 4rem 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #fff;
+}
+
+/* Scroll Fade-in Animation */
+.anim-fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.anim-fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* 3. HEADER & NAVIGATION STYLING */
+#main-header {
+    background-color: rgba(20, 66, 114, 0.8);
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+#main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; /* Override section padding */
+}
+
+.logo {
+    font-size: 1.5rem; font-weight: 700; color: var(--text-color); text-decoration: none;
+}
+
+nav ul {
+    list-style: none; display: flex; gap: 2rem;
+}
+
+nav a {
+    color: var(--text-color); text-decoration: none; font-weight: 600; padding-bottom: 5px; position: relative; transition: color 0.3s ease;
+}
+
+nav a::after {
+    content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 2px; background-color: var(--highlight-color); transform: scaleX(0); transform-origin: right; transition: transform 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+nav a:hover { color: var(--highlight-color); }
+nav a:hover::after { transform: scaleX(1); transform-origin: left; }
+
+.cta-button {
+    background-color: var(--highlight-color); color: #fff; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: 600; transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+    background-color: #3488c9; transform: translateY(-2px);
+}
+
+/* 4. HERO SECTION */
+#hero {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    min-height: 90vh;
+}
+
+.hero-content { flex: 1; }
+.hero-content h1 { font-size: 3.5rem; line-height: 1.2; margin-bottom: 1rem; color: #fff; }
+.hero-content p { font-size: 1.1rem; margin-bottom: 2rem; }
+.hero-image { flex: 1; }
+.hero-image img { width: 100%; border-radius: 10px; }
+
+/* 5. SERVICES - BENTO GRID */
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 250px);
+    gap: 1rem;
+}
+
+.bento-item {
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.bento-item::before { /* Dark overlay for text readability */
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    z-index: 1;
+}
+
+.bento-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.bento-item h3 {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+/* 6. ABOUT US */
+#about { display: flex; align-items: center; gap: 3rem; }
+.about-content { flex: 1; }
+.about-image { flex: 1; }
+.about-image img { width: 100%; border-radius: 10px; }
+
+/* 7. TESTIMONIALS */
+.testimonial-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.card {
+    background-color: var(--secondary-color);
+    padding: 2rem;
+    border-radius: 10px;
+    border-left: 5px solid var(--highlight-color);
+}
+.card h4 { margin-top: 1rem; color: #fff; }
+
+/* 8. CONTACT */
+.contact-box {
+    background-color: var(--accent-color);
+    padding: 3rem;
+    border-radius: 10px;
+    text-align: center;
+}
+.contact-box h2 { font-size: 2rem; margin-bottom: 1rem; }
+.contact-box p { margin-bottom: 2rem; }
+
+/* 9. FOOTER */
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--secondary-color);
+}
+
+/* 10. RESPONSIVE DESIGN FOR MOBILE */
+@media (max-width: 768px) {
+    #main-header .container { flex-direction: column; gap: 1rem; }
+    nav ul { padding: 1rem 0; }
+
+    #hero { flex-direction: column; text-align: center; }
+    .hero-content h1 { font-size: 2.5rem; }
+
+    .bento-grid { grid-template-columns: 1fr; grid-template-rows: repeat(4, 200px); }
+    #about { flex-direction: column-reverse; }
+    .testimonial-cards { grid-template-columns: 1fr; }
+}
