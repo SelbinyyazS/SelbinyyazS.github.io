@@ -1,4 +1,17 @@
-// Fade-in animation on scroll
+// --- HEADER SCROLL EFFECT ---
+const header = document.getElementById('main-header');
+
+// Add 'scrolled' class to header when user scrolls down
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) { // 50px from the top
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+});
+
+
+// --- FADE-IN ANIMATION ON SCROLL ---
 const animatedElements = document.querySelectorAll('.anim-fade-in');
 
 const observer = new IntersectionObserver((entries) => {

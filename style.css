@@ -1,202 +1,230 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+/* 1. FONT AND COLOR DEFINITIONS */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@800&family=Rajdhani:wght@500;700&display=swap');
 
 :root {
-    --primary-color: #0A2647; /* A deep, professional navy blue */
-    --secondary-color: #144272; /* A slightly lighter blue */
-    --accent-color: #205295; /* An even lighter, active blue */
-    --highlight-color: #2C74B3; /* A vibrant blue for calls to action */
-    --text-color: #EAFDFC; /* A clean, off-white for text */
-    --bg-color: #0A2647; /* Matching the primary for a seamless look */
+    --logo-blue: #2350DD;
+    --text-dark: #000000;
+    --bg-light: #FFFFFF;
+    --bg-off-white: #f9f9f9;
+    --border-color: #e0e0e0;
+    --font-heading: 'Orbitron', sans-serif; /* Bold, blocky font like "OGUZ" */
+    --font-body: 'Rajdhani', sans-serif; /* Clean, geometric font like "ACADEMY" */
 }
 
 /* 2. GENERAL & ANIMATION STYLES */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; padding: 0; box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth; /* Smooth scrolling for nav links */
+    scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-color);
+    font-family: var(--font-body);
+    background-color: var(--bg-light);
+    color: var(--text-dark);
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 .container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 4rem 20px;
+    max-width: 1100px; margin: 0 auto; padding: 6rem 20px;
 }
 
 .section-title {
     text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-    color: #fff;
+    font-family: var(--font-heading);
+    font-size: clamp(2.2rem, 5vw, 3rem);
+    margin-bottom: 4rem;
+    text-transform: uppercase;
 }
 
 /* Scroll Fade-in Animation */
 .anim-fade-in {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
-
 .anim-fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
+    opacity: 1; transform: translateY(0);
 }
-
 
 /* 3. HEADER & NAVIGATION STYLING */
 #main-header {
-    background-color: rgba(20, 66, 114, 0.8);
-    backdrop-filter: blur(10px); /* Frosted glass effect */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     padding: 1rem 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    width: 100%;
+    position: sticky; top: 0; z-index: 1000; width: 100%;
+    transition: background-color 0.4s ease, backdrop-filter 0.4s ease, box-shadow 0.4s ease;
+}
+
+#main-header.scrolled {
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 #main-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px; /* Override section padding */
+    display: flex; justify-content: space-between; align-items: center; padding: 0 20px;
 }
 
-.logo {
-    font-size: 1.5rem; font-weight: 700; color: var(--text-color); text-decoration: none;
+.logo img {
+    height: 50px; /* Adjust size as needed */
+    width: auto;
 }
 
 nav ul {
-    list-style: none; display: flex; gap: 2rem;
+    list-style: none; display: flex; gap: 2.5rem;
 }
 
 nav a {
-    color: var(--text-color); text-decoration: none; font-weight: 600; padding-bottom: 5px; position: relative; transition: color 0.3s ease;
+    color: var(--text-dark); text-decoration: none; font-weight: 700; font-size: 1.1rem;
+    text-transform: uppercase; position: relative; padding-bottom: 5px;
 }
-
 nav a::after {
-    content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 2px; background-color: var(--highlight-color); transform: scaleX(0); transform-origin: right; transition: transform 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+    content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 2px;
+    background-color: var(--logo-blue); transform: scaleX(0); transform-origin: left;
+    transition: transform 0.4s cubic-bezier(0.19, 1, 0.22, 1);
 }
-
-nav a:hover { color: var(--highlight-color); }
-nav a:hover::after { transform: scaleX(1); transform-origin: left; }
+nav a:hover::after {
+    transform: scaleX(1);
+}
 
 .cta-button {
-    background-color: var(--highlight-color); color: #fff; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: 600; transition: background-color 0.3s ease, transform 0.2s ease;
+    background-color: var(--logo-blue);
+    color: var(--bg-light);
+    border: 2px solid var(--logo-blue);
+    padding: 10px 25px;
+    text-decoration: none;
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .cta-button:hover {
-    background-color: #3488c9; transform: translateY(-2px);
+    background-color: transparent;
+    color: var(--logo-blue);
 }
 
 /* 4. HERO SECTION */
 #hero {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    min-height: 90vh;
+    min-height: 80vh;
+    display: flex; align-items: center; text-align: center;
+}
+.hero-content {
+    max-width: 800px; margin: 0 auto;
+}
+.hero-content h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(3rem, 10vw, 5.5rem);
+    line-height: 1.1; margin-bottom: 1.5rem; text-transform: uppercase;
+}
+.hero-content p {
+    font-size: 1.25rem; margin-bottom: 2.5rem;
 }
 
-.hero-content { flex: 1; }
-.hero-content h1 { font-size: 3.5rem; line-height: 1.2; margin-bottom: 1rem; color: #fff; }
-.hero-content p { font-size: 1.1rem; margin-bottom: 2rem; }
-.hero-image { flex: 1; }
-.hero-image img { width: 100%; border-radius: 10px; }
-
-/* 5. SERVICES - BENTO GRID */
-.bento-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 250px);
-    gap: 1rem;
+/* 5. SERVICES SECTION - CREATIVE LIST STYLE */
+#services {
+    background-color: var(--bg-off-white);
+}
+.service-list {
+    display: flex; flex-direction: column;
+}
+.service-item {
+    border-bottom: 1px solid var(--border-color);
+    padding: 2.5rem 2rem;
+    display: flex; justify-content: space-between; align-items: center;
+    transition: background-color 0.3s ease;
+}
+.service-item:first-child {
+    border-top: 1px solid var(--border-color);
+}
+.service-item h3 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    text-transform: uppercase;
+    flex-basis: 40%;
+}
+.service-item p {
+    font-size: 1.1rem;
+    flex-basis: 55%;
+    color: #555;
+}
+.service-item:hover {
+    background-color: #f0f0f0;
 }
 
-.bento-item {
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px;
-    position: relative;
-    display: flex;
-    align-items: flex-end;
-    padding: 1.5rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden;
+
+/* 6. ABOUT US SECTION */
+#about {
+    text-align: center;
+}
+.about-content {
+    max-width: 750px;
+    margin: 0 auto;
+}
+.about-content p {
+    font-size: 1.15rem;
 }
 
-.bento-item::before { /* Dark overlay for text readability */
-    content: '';
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-    z-index: 1;
+/* 7. KEY FACTS SECTION */
+#facts {
+    background-color: var(--logo-blue);
+    color: var(--bg-light);
+}
+#facts .section-title {
+    color: var(--bg-light);
+}
+.facts-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem; text-align: center;
+}
+.fact-item {
+    display: flex; flex-direction: column;
+}
+.fact-number {
+    font-family: var(--font-heading);
+    font-size: 4rem;
+    line-height: 1;
+}
+.fact-label {
+    font-family: var(--font-body);
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 0.5rem;
 }
 
-.bento-item:hover {
-    transform: scale(1.03);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-}
-
-.bento-item h3 {
-    position: relative;
-    z-index: 2;
-    color: #fff;
-    font-size: 1.5rem;
-}
-
-/* 6. ABOUT US */
-#about { display: flex; align-items: center; gap: 3rem; }
-.about-content { flex: 1; }
-.about-image { flex: 1; }
-.about-image img { width: 100%; border-radius: 10px; }
-
-/* 7. TESTIMONIALS */
-.testimonial-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
-.card {
-    background-color: var(--secondary-color);
-    padding: 2rem;
-    border-radius: 10px;
-    border-left: 5px solid var(--highlight-color);
-}
-.card h4 { margin-top: 1rem; color: #fff; }
 
 /* 8. CONTACT */
 .contact-box {
-    background-color: var(--accent-color);
-    padding: 3rem;
-    border-radius: 10px;
-    text-align: center;
+    border: 1px solid var(--border-color);
+    padding: 4rem; text-align: center;
 }
-.contact-box h2 { font-size: 2rem; margin-bottom: 1rem; }
-.contact-box p { margin-bottom: 2rem; }
+.contact-box h2 {
+    font-family: var(--font-heading);
+    font-size: 2.2rem; margin-bottom: 1rem; text-transform: uppercase;
+}
+.contact-box p {
+    margin-bottom: 2rem; max-width: 500px; margin-inline: auto;
+}
 
 /* 9. FOOTER */
 footer {
-    text-align: center;
-    padding: 2rem 0;
-    margin-top: 2rem;
-    border-top: 1px solid var(--secondary-color);
+    text-align: center; padding: 2rem 0; margin-top: 2rem; color: #888;
 }
 
 /* 10. RESPONSIVE DESIGN FOR MOBILE */
 @media (max-width: 768px) {
-    #main-header .container { flex-direction: column; gap: 1rem; }
-    nav ul { padding: 1rem 0; }
+    #main-header .container {
+        padding: 0 15px;
+    }
+    .logo img { height: 40px; }
+    nav { display: none; } /* On mobile, the CTA button is more important */
 
-    #hero { flex-direction: column; text-align: center; }
-    .hero-content h1 { font-size: 2.5rem; }
-
-    .bento-grid { grid-template-columns: 1fr; grid-template-rows: repeat(4, 200px); }
-    #about { flex-direction: column-reverse; }
-    .testimonial-cards { grid-template-columns: 1fr; }
+    .service-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+        padding: 2rem 1rem;
+    }
 }
