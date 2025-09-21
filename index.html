@@ -1,27 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tk"> <!-- Added language attribute -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oguz Academy</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <!-- HEADER & NAVIGATION -->
+    
+    <!-- MASTER HEADER -->
     <header id="main-header">
         <div class="container">
-            <!-- LOGO IMAGE -->
-            <a href="#" class="logo">
-                <img src="./logo.png" alt="Oguz Academy Logo">
+            <a href="/index.html" class="logo">
+                <img src="/logo.png" alt="Oguz Academy Logo">
             </a>
             <nav>
                 <ul>
-                    <li><a href="#services">Işimiz</a></li>
-                    <li><a href="#about">Biz</a></li>
-                    <li><a href="#facts">Bitiren işlerimiz</a></li>
+                    <li><a href="/index.html#services">Işimiz</a></li>
+                    <li><a href="/index.html#about">Biz</a></li>
+                    <li><a href="/index.html#facts">Bitiren işlerimiz</a></li>
+                    <li><a href="/universities.html">Tassyklanylýan Uniwersitetler</a></li>
                 </ul>
             </nav>
-            <a href="#contact" class="cta-button">Habarlaş</a>
+            <a href="/index.html#contact" class="cta-button">Habarlaş</a>
         </div>
     </header>
 
@@ -42,15 +43,15 @@
             <h2 class="section-title anim-fade-in">Bitirýän işlerimiz</h2>
             <div class="service-list">
                 <div class="service-item anim-fade-in">
-                    <h3>Uniwersitet </h3>
+                    <h3>Uniwersitet</h3>
                     <p>Türkiýäniň ýokary okuw mekdepleri üçin resminama tabşyrmak ugrunda giňişleýin görkezme.</p>
                 </div>
                 <div class="service-item anim-fade-in">
                     <h3>Karýera maslahat beriş</h3>
-                    <p>Uzun möhletli hünär maksatlaryňyz bilen akademik ugurlaryňyzy utgaşdyrmak.</p>
+                    <p>Uzyn möhletli hünär maksatlaryňyz bilen akademik ugurlaryňyzy utgaşdyrmak.</p>
                 </div>
                  <div class="service-item anim-fade-in">
-                    <h3>Visa kömek</h3>
+                    <h3>Visa işleri</h3>
                     <p>Talyp visa kynçylyksyz we üstünlikli bir görnüşde tamamlanmagy üçin hünärmen kömegi.</p>
                 </div>
                 <div class="service-item anim-fade-in">
@@ -74,7 +75,7 @@
             <h2 class="section-title anim-fade-in">Hüjümli Faktlar</h2>
             <div class="facts-grid">
                 <div class="fact-item anim-fade-in">
-                    <span class="fact-number">1,200+</span>
+                    <span class="fact-number">500+</span>
                     <span class="fact-label">Talyp Kömek Edilen</span>
                 </div>
                 <div class="fact-item anim-fade-in">
@@ -89,22 +90,64 @@
         </section>
 
         <!-- CONTACT SECTION -->
-        <section id="contact" class="container">
-            <div class="contact-box anim-fade-in">
-                <h2>Birje yazanyňyz hem yetik</h2>
-                <p>Kelläňizdäki islendik soragyňyzy beriberiň. Hemmesine jogap bereris.</p>
-                <a href="tel:+905457272800" class="cta-button">+905457272800</a>
+<!-- CONTACT SECTION -->
+    <section id="contact" class="container">
+        <div class="about-content anim-fade-in">
+            <h2 class="section-title">Habarlaş</h2>
+            <p style="text-align: center; margin-top: -2rem; margin-bottom: 3rem;">Kelläňizdäki islendik soragyňyzy beriberiň. Hemmesine jogap bereris.</p>
+        </div>
+        <div class="contact-grid anim-fade-in">
+            <!-- Contact Card 1: First Phone Number -->
+            <div class="contact-card">
+                <h3>Telefon (Türkiýe)</h3>
+                <p class="contact-number">+90 545 727 2800</p>
+                <div class="app-links">
+                    <!-- WhatsApp Direct Link -->
+                    <a href="https://wa.me/905457272800" target="_blank" class="app-link whatsapp">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+                        WhatsApp
+                    </a>
+                    <!-- IMO Information (Not a direct link) -->
+                    <div class="app-link imo">
+                        <img src="./imo-icon.png" alt="IMO">
+                        IMO
+                    </div>
+                </div>
             </div>
-        </section>
-    </main>
 
-    <!-- FOOTER -->
+            <!-- Contact Card 2: Second Phone Number -->
+            <div class="contact-card">
+                <h3>Telefon (Türkmenistan)</h3>
+                <p class="contact-number">+99362292624</p> 
+                <div class="app-links">
+                    <!-- WhatsApp Direct Link -->
+                    <a href="https://wa.me/99362292624" target="_blank" class="app-link whatsapp">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+                        WhatsApp
+                    </a>
+                    <!-- IMO Information (Not a direct link) -->
+                    <div class="app-link imo">
+                        <img src="./imo-icon.png" alt="IMO">
+                        IMO
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Card 3: Email -->
+            <div class="contact-card">
+                <h3>Email</h3>
+                <a href="mailto:info@oguzacademy.com" class="contact-email">info@oguzacademy.com</a>
+            </div>
+        </div>
+    </section>
+    <!-- MASTER FOOTER -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 Oguz Academy. All Rights Reserved.</p>
+            <p>&copy; 2025 Oguz Academy. Ähli hukuklar goralan.</p>
         </div>
     </footer>
 
-    <script src="./script.js"></script>
+    <script src="/script.js"></script>
+    <!-- Note: We don't need universities.js on the homepage -->
 </body>
 </html>

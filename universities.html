@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="tk"> <!-- Added language attribute -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tassyklanýan Uniwersitetler | Oguz Academy</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    
+    <!-- MASTER HEADER -->
+    <header id="main-header">
+        <div class="container">
+            <a href="/index.html" class="logo">
+                <img src="/logo.png" alt="Oguz Academy Logo">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="/index.html#services">Işimiz</a></li>
+                    <li><a href="/index.html#about">Biz</a></li>
+                    <li><a href="/index.html#facts">Bitiren işlerimiz</a></li>
+                    <li><a href="/universities.html">Tassyklanýan Uniwersitetler</a></li>
+                </ul>
+            </nav>
+            <a href="/index.html#contact" class="cta-button">Habarlaş</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="uni-list-section" class="container">
+            <h1 class="section-title anim-fade-in">Türkiýedäki Uniwersitetler</h1>
+
+            <div id="university-list-container" class="anim-fade-in">
+                <!-- University list will be built by JS here -->
+            </div>
+
+        </section>
+    </main>
+
+    <!-- MASTER FOOTER -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Oguz Academy. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Script loading order is important here! -->
+    <script src="/universities.js"></script>
+    <script src="/script.js"></script> 
+</body>
+</html>

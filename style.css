@@ -7,8 +7,8 @@
     --bg-light: #FFFFFF;
     --bg-off-white: #f9f9f9;
     --border-color: #e0e0e0;
-    --font-heading: 'Orbitron', sans-serif; /* Bold, blocky font like "OGUZ" */
-    --font-body: 'Rajdhani', sans-serif; /* Clean, geometric font like "ACADEMY" */
+    --font-heading: 'Orbitron', sans-serif;
+    --font-body: 'Rajdhani', sans-serif; 
 }
 
 /* 2. GENERAL & ANIMATION STYLES */
@@ -66,7 +66,7 @@ body {
 }
 
 .logo img {
-    height: 50px; /* Adjust size as needed */
+    height: 100px; 
     width: auto;
 }
 
@@ -227,4 +227,143 @@ footer {
         gap: 1rem;
         padding: 2rem 1rem;
     }
+}
+
+/* 11. UNIVERSITIES PAGE STYLES */
+
+#uni-list-section h1 {
+    margin-bottom: 3rem;
+}
+
+.city-group {
+    margin-bottom: 3rem;
+}
+
+.city-name {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--border-color);
+    margin-bottom: 1rem;
+}
+
+.uni-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 1rem;
+    text-decoration: none;
+    color: var(--text-dark);
+    border-bottom: 1px solid #f0f0f0;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.uni-item:hover {
+    background-color: var(--bg-off-white);
+    transform: translateX(5px);
+}
+
+.uni-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.uni-arrow {
+    font-size: 1.5rem;
+    color: var(--logo-blue);
+    transition: transform 0.3s ease;
+}
+
+.uni-item:hover .uni-arrow {
+    transform: translateX(10px);
+}
+
+/* 8. CONTACT SECTION (REVISED) */
+#contact .about-content {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.contact-card {
+    border: 1px solid var(--border-color);
+    padding: 2.5rem 2rem;
+    text-align: center;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.contact-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.contact-number {
+    font-family: var(--font-body);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--logo-blue);
+    margin-bottom: 1.5rem;
+}
+
+.app-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+}
+
+.app-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: transform 0.3s ease;
+}
+
+.app-link:hover {
+    transform: scale(1.05);
+}
+
+.app-link img {
+    height: 24px;
+}
+
+/* Specific styles for each button */
+.app-link.whatsapp {
+    background-color: #25D366;
+    color: white;
+}
+
+.app-link.imo {
+    background-color: #f9f9f9;
+    color: #333;
+    border: 1px solid #ddd;
+    cursor: default; /* Indicates it's not a clickable link */
+}
+
+.contact-email {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    text-decoration: none;
+}
+
+.contact-email:hover {
+    color: var(--logo-blue);
 }
