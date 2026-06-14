@@ -1,153 +1,217 @@
 <!DOCTYPE html>
-<html lang="tk"> <!-- Added language attribute -->
+<html lang="tk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oguz Academy</title>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="./style.css?v=20260614-6">
 </head>
 <body>
-    
-    <!-- MASTER HEADER -->
     <header id="main-header">
-        <div class="container">
-            <a href="/index.html" class="logo">
-                <img src="/logo.png" alt="Oguz Academy Logo">
+        <div class="container header-inner">
+            <a href="./index.html" class="logo">
+                <img src="./logo.png" alt="Oguz Academy Logo">
             </a>
-            <nav>
+            <nav aria-label="Main navigation">
                 <ul>
-                    <li><a href="/index.html#services">Işimiz</a></li>
-                    <li><a href="/index.html#about">Biz</a></li>
-                    <li><a href="/index.html#facts">Bitiren işlerimiz</a></li>
-                    <li><a href="/universities.html">Tassyklanylýan Uniwersitetler</a></li>
+                    <li><a href="./index.html#services" data-i18n="navServices">Işimiz</a></li>
+                    <li><a href="./index.html#about" data-i18n="navAbout">Biz</a></li>
+                    <li><a href="./index.html#facts" data-i18n="navFacts">Netijeler</a></li>
+                    <li><a href="./index.html#faq" data-i18n="navFAQ">FAQ</a></li>
+                    <li><a href="./universities.html" data-i18n="navUniversities">Uniwersitetler</a></li>
                 </ul>
             </nav>
-            <a href="/index.html#contact" class="cta-button">Habarlaş</a>
+            <div class="header-actions">
+                <a href="./index.html#contact" class="cta-button" data-i18n="contactBtn">Habarlaş</a>
+                <select id="langSwitcher" class="lang-switcher" aria-label="Choose language">
+                    <option value="tk">Türkmençe</option>
+                    <option value="tr">Türkçe</option>
+                    <option value="en">English</option>
+                    <option value="ru">Русский</option>
+                    <option value="uz">O'zbek</option>
+                </select>
+            </div>
         </div>
     </header>
 
     <main>
-        <!-- HERO SECTION -->
         <section id="hero">
             <div class="container">
                 <div class="hero-content">
-                    <h1 class="anim-fade-in">Okasaň Boldy. Galany bizden</h1>
-                    <p class="anim-fade-in"></p>
-                    <a href="#contact" class="cta-button anim-fade-in">Habar et</a>
+                    <span class="eyebrow anim-fade-in" data-i18n="heroEyebrow">Türkiýede okuw üçin doly goldaw</span>
+                    <h1 class="anim-fade-in" data-i18n="heroTitle">Okasaň boldy. Galany bizden.</h1>
+                    <p class="anim-fade-in" data-i18n="heroText">Uniwersitet saýlamakdan başlap resminama, kabul, wiza we ýerleşiş maslahatlaryna çenli ýanyňyzda bolýarys.</p>
+                    <div class="hero-actions anim-fade-in">
+                        <a href="#contact" class="cta-button" data-i18n="heroBtn">Habar et</a>
+                        <a href="./universities.html" class="secondary-button" data-i18n="heroSecondary">Uniwersitetleri gör</a>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- SERVICES SECTION -->
-        <section id="services" class="container">
-            <h2 class="section-title anim-fade-in">Bitirýän işlerimiz</h2>
-            <div class="service-list">
-                <div class="service-item anim-fade-in">
-                    <h3>Uniwersitet</h3>
-                    <p>Türkiýäniň ýokary okuw mekdepleri üçin resminama tabşyrmak ugrunda giňişleýin görkezme.</p>
-                </div>
-                <div class="service-item anim-fade-in">
-                    <h3>Karýera maslahat beriş</h3>
-                    <p>Uzyn möhletli hünär maksatlaryňyz bilen akademik ugurlaryňyzy utgaşdyrmak.</p>
-                </div>
-                 <div class="service-item anim-fade-in">
-                    <h3>Visa işleri</h3>
-                    <p>Talyp visa kynçylyksyz we üstünlikli bir görnüşde tamamlanmagy üçin hünärmen kömegi.</p>
-                </div>
-                <div class="service-item anim-fade-in">
-                    <h3>Test taýýarlyk</h3>
-                    <p>Uniwersitet giriş we dil derejesini ýokarlandyrmak üçin niýetlenen taýýarlyk okuw.</p>
+        <section id="university-logo-carousel" aria-label="Approved universities">
+            <div class="logo-carousel-track" id="university-logo-track"></div>
+        </section>
+
+        <section id="visual-story" class="container">
+            <div class="section-heading anim-fade-in">
+                <span class="eyebrow" data-i18n="visualEyebrow">Istanbul, kampuslar, maslahat</span>
+                <h2 class="section-title" data-i18n="visualTitle">Okuw ýoluny göz öňüňize getiriň</h2>
+                <p data-i18n="visualIntro">Talyplar üçin şäher, uniwersitet durmuşy we dogry maslahat bir ýerde jemlenende karar bermek has aňsat bolýar.</p>
+            </div>
+            <div class="photo-grid">
+                <article class="photo-card large anim-fade-in">
+                    <img src="./images/istanbul-students.jpg" alt="Students walking by the Bosphorus in Istanbul">
+                    <div>
+                        <h3 data-i18n="photoIstanbulTitle">Istanbulda talyp durmuşy</h3>
+                        <p data-i18n="photoIstanbulText">Medeniýet, mümkinçilik we halkara talyp jemgyýeti bilen doly şäher.</p>
+                    </div>
+                </article>
+                <article class="photo-card anim-fade-in">
+                    <img src="./images/campus-life.jpg" alt="Students on a modern university campus">
+                    <div>
+                        <h3 data-i18n="photoCampusTitle">Kampus saýlawlary</h3>
+                        <p data-i18n="photoCampusText">Hünäriňize, býujetiňize we dil islegiňize görä uniwersitetleri deňeşdirýäris.</p>
+                    </div>
+                </article>
+                <article class="photo-card anim-fade-in">
+                    <img src="./images/team-consultation.jpg" alt="Education consultants advising students">
+                    <div>
+                        <h3 data-i18n="photoTeamTitle">Ýakyndan maslahat</h3>
+                        <p data-i18n="photoTeamText">Her talyp üçin aýratyn ýol kartasy, resminama sanawy we kabul meýilnamasy taýýarlanýar.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="services">
+            <div class="container">
+                <h2 class="section-title anim-fade-in" data-i18n="servicesTitle">Bitirýän işlerimiz</h2>
+                <div class="service-list">
+                    <div class="service-item anim-fade-in">
+                        <h3 data-i18n="service1Title">Uniwersitet</h3>
+                        <p data-i18n="service1Desc">Türkiýedäki ýokary okuw mekdeplerine ýüz tutmak üçin uniwersitet, bölüm we býujet boýunça giňişleýin görkezme.</p>
+                    </div>
+                    <div class="service-item anim-fade-in">
+                        <h3 data-i18n="service2Title">Karýera maslahaty</h3>
+                        <p data-i18n="service2Desc">Uzak möhletli hünär maksatlaryňyz bilen akademik ugurlaryňyzy utgaşdyrmaga kömek edýäris.</p>
+                    </div>
+                    <div class="service-item anim-fade-in">
+                        <h3 data-i18n="service3Title">Wiza işleri</h3>
+                        <p data-i18n="service3Desc">Talyp wizasy üçin resminama taýýarlygy, barlag sanawy we tabşyrmak tapgyrlarynda goldaw berýäris.</p>
+                    </div>
+                    <div class="service-item anim-fade-in">
+                        <h3 data-i18n="service4Title">Taýýarlyk</h3>
+                        <p data-i18n="service4Desc">Dil, giriş synagy we uniwersitet talaplary üçin zerur taýýarlyk ýoluny saýlamaga kömek edýäris.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- ABOUT US SECTION (No Image) -->
         <section id="about" class="container">
-            <div class="about-content anim-fade-in">
-                <h2 class="section-title">Biz Kim</h2>
-                <p>Täze açylan bolsak-da, Oguz Academy yüzlerçe talyby dünýäniň iň gowy uniwersitetlerine ýerleşdirdi. Biziň maksadymyz kabul ediş prosesini düşündirmek we talyplara doly mümkinçiliklerini gazanmak üçin güýç bermekdir.</p>
-                <p>Biz şahsylaşdyrylan çemeleşmä ynanýarys, her talybyň özboluşly güýçlerini we arzuwlaryny düşünmek arkaly Türkiýedäki iň amatly akademik öýüni tapmaga kömek edýäris.</p>
-            </div>
-        </section>
-
-        <!-- KEY FACTS SECTION (New) -->
-        <section id="facts" class="container">
-            <h2 class="section-title anim-fade-in">Hüjümli Faktlar</h2>
-            <div class="facts-grid">
-                <div class="fact-item anim-fade-in">
-                    <span class="fact-number">500+</span>
-                    <span class="fact-label">Talyp Kömek Edilen</span>
-                </div>
-                <div class="fact-item anim-fade-in">
-                    <span class="fact-number">200+</span>
-                    <span class="fact-label">Türkiýedäki Uniwersitetler</span>
-                </div>
-                <div class="fact-item anim-fade-in">
-                    <span class="fact-number">99.9%</span>
-                    <span class="fact-label">Visa üstünlik derejesi</span>
+            <div class="about-flex">
+                <img src="./images/team-consultation.jpg" alt="Oguz Academy consultation meeting" class="section-image anim-fade-in">
+                <div class="about-content anim-fade-in">
+                    <span class="eyebrow" data-i18n="aboutEyebrow">Oguz Academy</span>
+                    <h2 class="section-title" data-i18n="aboutTitle">Biz kim?</h2>
+                    <p data-i18n="aboutText1">Oguz Academy talyplara Türkiýedäki uniwersitetleri dogry saýlamaga, resminamalary taýýarlamaga we kabul prosesini ynamly geçmäge kömek edýän maslahat merkezidir.</p>
+                    <p data-i18n="aboutText2">Biz her talybyň maksadyny, býujetini, dil derejesini we hünär meýilnamasyny diňläp, şol maglumatlara görä iň laýyk wariantlary hödürleýäris.</p>
+                    <ul class="check-list">
+                        <li data-i18n="aboutPoint1">Uniwersitet we bölüm deňeşdirmesi</li>
+                        <li data-i18n="aboutPoint2">Resminama we möhlet gözegçiligi</li>
+                        <li data-i18n="aboutPoint3">Kabuldan soňky ýol görkezme</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
-        <!-- CONTACT SECTION -->
-<!-- CONTACT SECTION -->
-    <section id="contact" class="container">
-        <div class="about-content anim-fade-in">
-            <h2 class="section-title">Habarlaş</h2>
-            <p style="text-align: center; margin-top: -2rem; margin-bottom: 3rem;">Kelläňizdäki islendik soragyňyzy beriberiň. Hemmesine jogap bereris.</p>
-        </div>
-        <div class="contact-grid anim-fade-in">
-            <!-- Contact Card 1: First Phone Number -->
-            <div class="contact-card">
-                <h3>Telefon (Türkiýe)</h3>
-                <p class="contact-number">+90 545 727 2800</p>
-                <div class="app-links">
-                    <!-- WhatsApp Direct Link -->
-                    <a href="https://wa.me/905457272800" target="_blank" class="app-link whatsapp">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-                        WhatsApp
-                    </a>
-                    <!-- IMO Information (Not a direct link) -->
-                    <div class="app-link imo">
-                        <img src="./imo-icon.png" alt="IMO">
-                        IMO
+        <section id="facts">
+            <div class="container">
+                <h2 class="section-title anim-fade-in" data-i18n="factsTitle">Esasy netijeler</h2>
+                <div class="facts-grid">
+                    <div class="fact-item anim-fade-in">
+                        <span class="fact-number">500+</span>
+                        <span class="fact-label" data-i18n="fact1">Goldaw berlen talyp</span>
+                    </div>
+                    <div class="fact-item anim-fade-in">
+                        <span class="fact-number">200+</span>
+                        <span class="fact-label" data-i18n="fact2">Türkiýedäki uniwersitet</span>
+                    </div>
+                    <div class="fact-item anim-fade-in">
+                        <span class="fact-number">5</span>
+                        <span class="fact-label" data-i18n="fact3">Dil boýunça hyzmat</span>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Contact Card 2: Second Phone Number -->
-            <div class="contact-card">
-                <h3>Telefon (Türkmenistan)</h3>
-                <p class="contact-number">+99362292624</p> 
-                <div class="app-links">
-                    <!-- WhatsApp Direct Link -->
-                    <a href="https://wa.me/99362292624" target="_blank" class="app-link whatsapp">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-                        WhatsApp
-                    </a>
-                    <!-- IMO Information (Not a direct link) -->
-                    <div class="app-link imo">
-                        <img src="./imo-icon.png" alt="IMO">
-                        IMO
+        <section id="faq" class="container">
+            <div class="section-heading anim-fade-in">
+                <span class="eyebrow" data-i18n="faqEyebrow">Sorag-jogap</span>
+                <h2 class="section-title" data-i18n="faqTitle">Köp soralýan soraglar</h2>
+            </div>
+            <div id="faq-list" class="faq-list anim-fade-in"></div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <div class="section-heading anim-fade-in">
+                    <span class="eyebrow" data-i18n="contactEyebrow">Indiki ädim</span>
+                    <h2 class="section-title" data-i18n="contactTitle">Habarlaş</h2>
+                    <p data-i18n="contactSub">Kelläňizdäki islendik soragyňyzy beriň. Size laýyk uniwersitetleri bilelikde saýlap başlarys.</p>
+                </div>
+                <div class="contact-grid anim-fade-in">
+                    <div class="contact-card">
+                        <h3 data-i18n="phoneTr">Telefon (Türkiýe)</h3>
+                        <p class="contact-number">+90 545 727 2800</p>
+                        <div class="app-links">
+                            <a href="https://wa.me/905457272800" target="_blank" class="app-link whatsapp" rel="noopener">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="">
+                                WhatsApp
+                            </a>
+                            <div class="app-link imo">
+                                <img src="./imo-icon.png" alt="">
+                                IMO
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <h3 data-i18n="phoneTm">Telefon (Türkmenistan)</h3>
+                        <p class="contact-number">+993 62 292624</p>
+                        <div class="app-links">
+                            <a href="https://wa.me/99362292624" target="_blank" class="app-link whatsapp" rel="noopener">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="">
+                                WhatsApp
+                            </a>
+                            <div class="app-link imo">
+                                <img src="./imo-icon.png" alt="">
+                                IMO
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <h3 data-i18n="contactSocial">Biziň bilen boluň</h3>
+                        <a href="mailto:info@oguzacademy.com" class="contact-email">info@oguzacademy.com</a>
+                        <p class="contact-address" data-i18n="contactAddress"><strong>Adres:</strong> Aşgabat şäheri, Parahat 7</p>
+                        <div class="app-links">
+                            <a href="https://instagram.com/oguzacademy" target="_blank" class="app-link instagram" rel="noopener">Instagram</a>
+                            <a href="https://tiktok.com/@oguzacademy" target="_blank" class="app-link tiktok" rel="noopener">TikTok</a>
+                        </div>
                     </div>
                 </div>
             </div>
+        </section>
+    </main>
 
-            <!-- Contact Card 3: Email -->
-            <div class="contact-card">
-                <h3>Email</h3>
-                <a href="mailto:info@oguzacademy.com" class="contact-email">info@oguzacademy.com</a>
-            </div>
-        </div>
-    </section>
-    <!-- MASTER FOOTER -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 Oguz Academy. Ähli hukuklar goralan.</p>
+            <p>&copy; 2026 Oguz Academy. Ähli hukuklar goralan.</p>
         </div>
     </footer>
 
-    <script src="/script.js"></script>
-    <!-- Note: We don't need universities.js on the homepage -->
+    <script src="./universities.js?v=20260614-6"></script>
+    <script src="./script.js?v=20260614-6"></script>
 </body>
 </html>

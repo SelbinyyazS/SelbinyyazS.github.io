@@ -1,0 +1,27 @@
+Place official university logo PNG files in this folder using these filenames:
+
+- acibadem.png
+- altinbas.png
+- atilim.png
+- bahcesehir.png
+- baskent.png
+- beykent.png
+- bezmialem-vakif.png
+- bilkent.png
+- biruni.png
+- cankaya.png
+- istanbul-okan.png
+- istinye.png
+- izmir-economics.png
+- kadir-has.png
+- koc.png
+- ozyegin.png
+- sabanci.png
+- istanbul-aydin.png
+- istanbul-bilgi.png
+- istanbul-gelisim.png
+- istanbul-medipol.png
+- tobb-etuu.png
+- uskudar.png
+- yasar.png
+- yeditepe.png
