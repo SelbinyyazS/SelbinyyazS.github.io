@@ -1,5 +1,6 @@
 // --- HEADER SCROLL EFFECT ---
 const header = document.getElementById("main-header");
+const FEATURED_UNIS = ["Bahcesehir University", "Istanbul Medipol University"];
 
 if (header) {
     window.addEventListener("scroll", () => {
@@ -53,7 +54,7 @@ const translations = {
         navUniversities: "Uniwersitetler",
         contactBtn: "Habarlaş",
         heroEyebrow: "Türkiýede okuw üçin doly goldaw",
-        heroTitle: "Okasaň boldy. Galany bizden.",
+        heroTitle: "OGUZ ACADEMY – Türk Dünýäsiniň Bilim Köprüsi",
         heroText: "Uniwersitet saýlamakdan başlap resminama, kabul, wiza we ýerleşiş maslahatlaryna çenli ýanyňyzda bolýarys.",
         heroBtn: "Habar et",
         heroSecondary: "Uniwersitetleri gör",
@@ -116,16 +117,18 @@ const translations = {
         phoneTr: "Telefon (Türkiýe)",
         phoneTm: "Telefon (Türkmenistan)",
         contactSocial: "Biziň bilen boluň",
-        contactAddress: "<strong>Adres:</strong> Aşgabat şäheri, Parahat 7",
+        contactAddress: "<strong>Adres:</strong> Istanbul/FATIH, Valide Camii Sokak, Aksaray iş hanı, 4. kat",
         uniHeroEyebrow: "Uniwersitet saýlawy",
         uniPageTitle: "Döwlet tarapyndan tassyklanan uniwersitetler",
         uniPageIntro: "Başlaýan baha belliklerini, depozit maglumatlaryny, meşhur bölümleri we täze baha sanawy üçin aragatnaşyk ýoluny bir ýerde görüň.",
         priceEyebrow: "Bahalar we maglumat",
-        priceIntro: "Kartlarda umumy maglumat görkezilýär. Täze bölüm bahalary üçin WhatsApp arkaly habarlaşyň ýa-da soň goşuljak baha faýlyny göçüriň.",
+        priceIntro: "Bu bölümde diňe Bahcesehir we Istanbul Medipol kartlary görkezilýär.",
         approvedEyebrow: "Döwlet tarapyndan tassyklanan",
-        approvedIntro: "Aşakdaky sanaw şäherler boýunça toparlanan. Has giňişleýin maglumat üçin biziň bilen habarlaşyp bilersiňiz.",
+        approvedIntro: "Galan uniwersitetleriň kartlary aşakda görkezilýär. Kabul şertleri we programmalar barada biziň bilen habarlaşyň.",
         uniGovTitle: "Tassyklanan uniwersitetler",
         uniPartnerTitle: "Tassyklanan uniwersitetler",
+        featuredUniTitle: "Tassyklanyan Uniwersitetler",
+        turkiyeUniTitle: "Galan Uniwersitetler",
         cityLabel: "Şäher",
         startPrice: "Başlaýan baha",
         deposit: "Depozit",
@@ -154,7 +157,7 @@ const translations = {
         navUniversities: "Üniversiteler",
         contactBtn: "İletişim",
         heroEyebrow: "Türkiye'de eğitim için tam destek",
-        heroTitle: "Sen oku. Gerisi bizde.",
+        heroTitle: "OGUZ ACADEMY – Türk Dünyasının Eğitim Köprüsü",
         heroText: "Üniversite seçiminden evraklara, kabul, vize ve yerleşme danışmanlığına kadar yanınızdayız.",
         heroBtn: "Bize yaz",
         heroSecondary: "Üniversiteleri gör",
@@ -201,16 +204,18 @@ const translations = {
         phoneTr: "Telefon (Türkiye)",
         phoneTm: "Telefon (Türkmenistan)",
         contactSocial: "Bizi takip edin",
-        contactAddress: "<strong>Adres:</strong> Aşkabat, Parahat 7",
+        contactAddress: "<strong>Adres:</strong> Istanbul/FATIH, Valide Camii Sokak, Aksaray iş hanı, 4. kat",
         uniHeroEyebrow: "Üniversite seçimi",
         uniPageTitle: "Devlet tarafından onaylanan üniversiteler",
         uniPageIntro: "Başlangıç fiyatları, depozito bilgileri, popüler bölümler ve ücret notlarını tek yerde görün.",
         priceEyebrow: "Fiyatlar ve bilgiler",
-        priceIntro: "Kartlarda genel bilgi gösterilir. Güncel bölüm ücretleri için WhatsApp üzerinden bizimle iletişime geçin.",
+        priceIntro: "Bu bölümde yalnızca Bahcesehir ve Istanbul Medipol kartları gösterilir.",
         approvedEyebrow: "Devlet tarafından onaylanan",
-        approvedIntro: "Liste şehirler halinde gruplandı. Kabul şartları ve programlar için bizimle iletişime geçebilirsiniz.",
+        approvedIntro: "Diğer üniversite kartları aşağıda gösterilir. Kabul şartları ve programlar için bizimle iletişime geçebilirsiniz.",
         uniGovTitle: "Onaylanan üniversiteler",
         uniPartnerTitle: "Onaylanan üniversiteler",
+        featuredUniTitle: "Tassyklanan Üniversiteler",
+        turkiyeUniTitle: "Diğer Üniversiteler",
         cityLabel: "Şehir",
         startPrice: "Başlangıç fiyatı",
         deposit: "Depozito",
@@ -239,7 +244,7 @@ const translations = {
         navUniversities: "Universities",
         contactBtn: "Contact",
         heroEyebrow: "Full support for studying in Turkey",
-        heroTitle: "Just study. Leave the rest to us.",
+        heroTitle: "OGUZ ACADEMY – The Educational Bridge of the Turkic World",
         heroText: "From choosing a university to documents, admission, visa, and arrival guidance, we stay beside you.",
         heroBtn: "Message us",
         heroSecondary: "See universities",
@@ -302,16 +307,18 @@ const translations = {
         phoneTr: "Phone (Turkey)",
         phoneTm: "Phone (Turkmenistan)",
         contactSocial: "Stay connected",
-        contactAddress: "<strong>Address:</strong> Ashgabat, Parahat 7",
+        contactAddress: "<strong>Address:</strong> Istanbul/FATIH, Valide Camii Sokak, Aksaray iş hanı, 4th floor",
         uniHeroEyebrow: "University choice",
         uniPageTitle: "Government Approved Universities",
         uniPageIntro: "See starting price notes, deposit information, popular departments, and the best contact path for current price lists.",
         priceEyebrow: "Prices and details",
-        priceIntro: "Cards show summary information. Contact us on WhatsApp for current program prices, or add downloadable price files later.",
+        priceIntro: "Only Bahcesehir and Istanbul Medipol are shown in this approved section.",
         approvedEyebrow: "Government approved",
-        approvedIntro: "The list below is grouped by city. Contact us for more details about admission requirements and programs.",
+        approvedIntro: "All other university cards are shown below. Contact us for more details about admission requirements and programs.",
         uniGovTitle: "Approved universities",
         uniPartnerTitle: "Approved universities",
+        featuredUniTitle: "Approved Universities",
+        turkiyeUniTitle: "All Other Universities",
         cityLabel: "City",
         startPrice: "Starting from",
         deposit: "Deposit",
@@ -340,7 +347,7 @@ const translations = {
         navUniversities: "Университеты",
         contactBtn: "Связаться",
         heroEyebrow: "Полная поддержка для учебы в Турции",
-        heroTitle: "Учись. Остальное оставь нам.",
+        heroTitle: "OGUZ ACADEMY – Ваш мост к успешному будущему",
         heroText: "Мы помогаем с выбором университета, документами, поступлением, визой и первыми шагами после приезда.",
         heroBtn: "Написать нам",
         heroSecondary: "Смотреть университеты",
@@ -403,16 +410,18 @@ const translations = {
         phoneTr: "Телефон (Турция)",
         phoneTm: "Телефон (Туркменистан)",
         contactSocial: "Оставайтесь на связи",
-        contactAddress: "<strong>Адрес:</strong> Ашхабад, Парахат 7",
+        contactAddress: "<strong>Адрес:</strong> Istanbul/FATIH, Valide Camii Sokak, Aksaray iş hanı, 4-й этаж",
         uniHeroEyebrow: "Выбор университета",
         uniPageTitle: "Утвержденные государством университеты",
         uniPageIntro: "Смотрите заметки о стартовых ценах, депозитах, популярных направлениях и способ связи для актуальных прайс-листов.",
         priceEyebrow: "Цены и информация",
-        priceIntro: "В карточках показана краткая информация. Для актуальных цен по программам напишите нам в WhatsApp или позже добавьте файлы для скачивания.",
+        priceIntro: "В этом утвержденном разделе показаны только Bahcesehir и Istanbul Medipol.",
         approvedEyebrow: "Утвержденные государством",
-        approvedIntro: "Список ниже сгруппирован по городам. Свяжитесь с нами, чтобы узнать больше о требованиях и программах.",
+        approvedIntro: "Все остальные карточки университетов показаны ниже. Свяжитесь с нами, чтобы узнать больше о требованиях и программах.",
         uniGovTitle: "Утвержденные университеты",
         uniPartnerTitle: "Утвержденные университеты",
+        featuredUniTitle: "Утвержденные университеты",
+        turkiyeUniTitle: "Все остальные университеты",
         cityLabel: "Город",
         startPrice: "Начиная от",
         deposit: "Депозит",
@@ -441,7 +450,7 @@ const translations = {
         navUniversities: "Universitetlar",
         contactBtn: "Bog'lanish",
         heroEyebrow: "Turkiyada o'qish uchun to'liq yordam",
-        heroTitle: "Faqat o'qing. Qolganini bizga qoldiring.",
+        heroTitle: "OGUZ ACADEMY – Turk Dunyosining Ta'lim Ko'prigi",
         heroText: "Universitet tanlashdan hujjatlar, qabul, viza va kelish bo'yicha maslahatlargacha yoningizda bo'lamiz.",
         heroBtn: "Xabar yozish",
         heroSecondary: "Universitetlarni ko'rish",
@@ -504,16 +513,18 @@ const translations = {
         phoneTr: "Telefon (Turkiya)",
         phoneTm: "Telefon (Turkmaniston)",
         contactSocial: "Biz bilan qoling",
-        contactAddress: "<strong>Manzil:</strong> Ashxobod, Parahat 7",
+        contactAddress: "<strong>Manzil:</strong> Istanbul/FATIH, Valide Camii Sokak, Aksaray iş hanı, 4-qavat",
         uniHeroEyebrow: "Universitet tanlovi",
         uniPageTitle: "Davlat tomonidan tasdiqlangan universitetlar",
         uniPageIntro: "Boshlanish narxi izohlari, depozit ma'lumotlari, mashhur yo'nalishlar va hozirgi narxlar uchun aloqa yo'lini bir joyda ko'ring.",
         priceEyebrow: "Narxlar va ma'lumot",
-        priceIntro: "Kartalarda qisqa ma'lumot ko'rsatiladi. Hozirgi dastur narxlari uchun WhatsApp orqali bog'laning yoki keyin yuklab olinadigan fayllarni qo'shing.",
+        priceIntro: "Bu tasdiqlangan bo'limda faqat Bahcesehir va Istanbul Medipol kartlari ko'rsatiladi.",
         approvedEyebrow: "Davlat tomonidan tasdiqlangan",
-        approvedIntro: "Quyidagi ro'yxat shaharlar bo'yicha guruhlangan. Qabul talablari va dasturlar haqida batafsil ma'lumot uchun biz bilan bog'laning.",
+        approvedIntro: "Boshqa barcha universitet kartlari quyida ko'rsatiladi. Qabul talablari va dasturlar haqida batafsil ma'lumot uchun biz bilan bog'laning.",
         uniGovTitle: "Tasdiqlangan universitetlar",
         uniPartnerTitle: "Tasdiqlangan universitetlar",
+        featuredUniTitle: "Tasdiqlangan Universitetlar",
+        turkiyeUniTitle: "Boshqa Universitetlar",
         cityLabel: "Shahar",
         startPrice: "Boshlanish narxi",
         deposit: "Depozit",
@@ -1041,15 +1052,116 @@ function renderUniversityLogos() {
     }).join("");
 }
 
-// --- DYNAMICALLY BUILD THE UNIVERSITY LIST ---
+function buildPartnerCard(uni, lang) {
+    const displayName = localized(uni.displayName, lang) || uni.name;
+    const departments = localized(uni.departments, lang);
+    const highlights = localized(uni.highlights, lang);
+    const departmentRanges = localized(uni.departmentRanges, lang) || uni.departmentRanges || [];
+    const image = uni.image || "./images/campus-life.jpg";
+    const contactHref = getWhatsAppLink(displayName);
+    const priceFile = localized(uni.priceFile, lang);
+    const startingPrice = uni.startingPrice
+        ? `${escapeHTML(uni.startingPrice)} ${escapeHTML(translate("perYear"))}`
+        : escapeHTML(translate("contactForPrice"));
+    const depositValue = uni.deposit
+        ? escapeHTML(uni.deposit)
+        : escapeHTML(translate("contactForPrice"));
+    const hasDepartmentRanges = Array.isArray(departmentRanges) && departmentRanges.length > 0;
+
+    const departmentTags = Array.isArray(departments)
+        ? departments.map(item => `<span>${escapeHTML(item)}</span>`).join("")
+        : "";
+    const highlightList = Array.isArray(highlights)
+        ? highlights.map(item => `<li>${escapeHTML(item)}</li>`).join("")
+        : "";
+    const rangeRows = Array.isArray(departmentRanges) ? departmentRanges.map(item => `
+        <tr>
+            <td>${escapeHTML(localized(item.department, lang))}</td>
+            <td>${escapeHTML(localized(item.range, lang) || translate("contactForPrice"))}</td>
+        </tr>
+    `).join("") : "";
+    const priceDetailsContent = hasDepartmentRanges
+        ? `
+            <div class="table-wrap">
+                <table class="department-range-table">
+                    <thead>
+                        <tr>
+                            <th>${escapeHTML(translate("departmentLabel"))}</th>
+                            <th>${escapeHTML(translate("priceRangeLabel"))}</th>
+                        </tr>
+                    </thead>
+                    <tbody>${rangeRows}</tbody>
+                </table>
+            </div>
+            <p>${escapeHTML(translate("priceNote"))}</p>
+        `
+        : priceFile
+            ? `
+                <a href="${escapeHTML(priceFile)}" class="price-file-link" download>
+                    ${escapeHTML(translate("downloadPriceList"))}
+                </a>
+                <p>${escapeHTML(translate("priceNote"))}</p>
+            `
+            : `<p class="price-note-inline">${escapeHTML(translate("priceRangesComingSoon"))}</p>`;
+
+    return `
+        <article class="partner-card">
+            <div class="partner-image-wrap">
+                <img src="${escapeHTML(image)}" alt="${escapeHTML(translate("illustrativePhoto"))}">
+                <span>${escapeHTML(translate("illustrativePhoto"))}</span>
+            </div>
+            <div class="partner-details">
+                <div class="partner-topline">${escapeHTML(translate("cityLabel"))}: ${escapeHTML(uni.city)}</div>
+                <h3 class="partner-name">${escapeHTML(displayName)}</h3>
+                <p class="partner-description">${escapeHTML(localized(uni.description, lang))}</p>
+
+                <div class="price-summary">
+                    <div>
+                        <span>${escapeHTML(translate("startPrice"))}</span>
+                        <strong>${startingPrice}</strong>
+                    </div>
+                    <div>
+                        <span>${escapeHTML(translate("deposit"))}</span>
+                        <strong>${depositValue}</strong>
+                    </div>
+                </div>
+
+                <div class="partner-block">
+                    <strong>${escapeHTML(translate("departmentsLabel"))}</strong>
+                    <div class="tag-list">${departmentTags}</div>
+                </div>
+
+                <div class="partner-block">
+                    <strong>${escapeHTML(translate("highlightsLabel"))}</strong>
+                    <ul class="compact-list">${highlightList}</ul>
+                </div>
+
+                <details class="price-details"${hasDepartmentRanges ? " open" : ""}>
+                    <summary>${escapeHTML(translate("priceDetails"))}</summary>
+                    ${priceDetailsContent}
+                </details>
+
+                <a href="${escapeHTML(contactHref)}" target="_blank" rel="noopener" class="partner-link">${escapeHTML(translate("officialWebsite"))}</a>
+            </div>
+        </article>
+    `;
+}
+
 function renderUniversities() {
+    const featuredContainer = document.getElementById("featured-university-list");
     const govContainer = document.getElementById("gov-university-list");
     const partnerContainer = document.getElementById("partner-university-list");
 
-    if (!govContainer && !partnerContainer) return;
+    if (!govContainer && !partnerContainer && !featuredContainer) return;
     if (typeof universities === "undefined") return;
 
     const lang = getCurrentLang();
+
+    // Render featured universities (Bahcesehir + Medipol)
+    if (featuredContainer) {
+        const featuredUnis = universities.filter(uni => FEATURED_UNIS.includes(uni.name));
+        featuredContainer.innerHTML = featuredUnis.map(uni => buildPartnerCard(uni, lang)).join("");
+    }
 
     if (govContainer) {
         let currentCity = "";
@@ -1081,101 +1193,7 @@ function renderUniversities() {
     }
 
     if (partnerContainer) {
-        const partnerUnis = universities.filter(uni => uni.category === "partner");
-
-        partnerContainer.innerHTML = partnerUnis.map(uni => {
-            const displayName = localized(uni.displayName, lang) || uni.name;
-            const departments = localized(uni.departments, lang);
-            const highlights = localized(uni.highlights, lang);
-            const departmentRanges = localized(uni.departmentRanges, lang) || uni.departmentRanges || [];
-            const image = uni.image || "./images/campus-life.jpg";
-            const contactHref = getWhatsAppLink(displayName);
-            const priceFile = localized(uni.priceFile, lang);
-            const startingPrice = uni.startingPrice
-                ? `${escapeHTML(uni.startingPrice)} ${escapeHTML(translate("perYear"))}`
-                : escapeHTML(translate("contactForPrice"));
-            const depositValue = uni.deposit
-                ? escapeHTML(uni.deposit)
-                : escapeHTML(translate("contactForPrice"));
-            const hasDepartmentRanges = Array.isArray(departmentRanges) && departmentRanges.length > 0;
-
-            const departmentTags = Array.isArray(departments)
-                ? departments.map(item => `<span>${escapeHTML(item)}</span>`).join("")
-                : "";
-            const highlightList = Array.isArray(highlights)
-                ? highlights.map(item => `<li>${escapeHTML(item)}</li>`).join("")
-                : "";
-            const rangeRows = Array.isArray(departmentRanges) ? departmentRanges.map(item => `
-                <tr>
-                    <td>${escapeHTML(localized(item.department, lang))}</td>
-                    <td>${escapeHTML(localized(item.range, lang) || translate("contactForPrice"))}</td>
-                </tr>
-            `).join("") : "";
-            const priceDetailsContent = hasDepartmentRanges
-                ? `
-                    <div class="table-wrap">
-                        <table class="department-range-table">
-                            <thead>
-                                <tr>
-                                    <th>${escapeHTML(translate("departmentLabel"))}</th>
-                                    <th>${escapeHTML(translate("priceRangeLabel"))}</th>
-                                </tr>
-                            </thead>
-                            <tbody>${rangeRows}</tbody>
-                        </table>
-                    </div>
-                    <p>${escapeHTML(translate("priceNote"))}</p>
-                `
-                : priceFile
-                    ? `
-                        <a href="${escapeHTML(priceFile)}" class="price-file-link" download>
-                            ${escapeHTML(translate("downloadPriceList"))}
-                        </a>
-                        <p>${escapeHTML(translate("priceNote"))}</p>
-                    `
-                    : `<p class="price-note-inline">${escapeHTML(translate("priceRangesComingSoon"))}</p>`;
-
-            return `
-                <article class="partner-card">
-                    <div class="partner-image-wrap">
-                        <img src="${escapeHTML(image)}" alt="${escapeHTML(translate("illustrativePhoto"))}">
-                        <span>${escapeHTML(translate("illustrativePhoto"))}</span>
-                    </div>
-                    <div class="partner-details">
-                        <div class="partner-topline">${escapeHTML(translate("cityLabel"))}: ${escapeHTML(uni.city)}</div>
-                        <h3 class="partner-name">${escapeHTML(displayName)}</h3>
-                        <p class="partner-description">${escapeHTML(localized(uni.description, lang))}</p>
-
-                        <div class="price-summary">
-                            <div>
-                                <span>${escapeHTML(translate("startPrice"))}</span>
-                                <strong>${startingPrice}</strong>
-                            </div>
-                            <div>
-                                <span>${escapeHTML(translate("deposit"))}</span>
-                                <strong>${depositValue}</strong>
-                            </div>
-                        </div>
-
-                        <div class="partner-block">
-                            <strong>${escapeHTML(translate("departmentsLabel"))}</strong>
-                            <div class="tag-list">${departmentTags}</div>
-                        </div>
-
-                        <div class="partner-block">
-                            <strong>${escapeHTML(translate("highlightsLabel"))}</strong>
-                            <ul class="compact-list">${highlightList}</ul>
-                        </div>
-
-                        <details class="price-details"${hasDepartmentRanges ? " open" : ""}>
-                            <summary>${escapeHTML(translate("priceDetails"))}</summary>
-                            ${priceDetailsContent}
-                        </details>
-
-                        <a href="${escapeHTML(contactHref)}" target="_blank" rel="noopener" class="partner-link">${escapeHTML(translate("officialWebsite"))}</a>
-                    </div>
-                </article>
-            `;
-        }).join("");
+        const partnerUnis = universities.filter(uni => uni.category === "partner" && !FEATURED_UNIS.includes(uni.name));
+        partnerContainer.innerHTML = partnerUnis.map(uni => buildPartnerCard(uni, lang)).join("");
     }
 }

@@ -53,6 +53,7 @@ const universityLogoSlugs = {
 const availableLogoSlugs = new Set([
     "altinbas",
     "atilim",
+    "acibadem",
     "bahcesehir",
     "baskent",
     "beykent",
@@ -63,7 +64,17 @@ const availableLogoSlugs = new Set([
     "istanbul-medipol",
     "koc",
     "sabanci",
-    "yeditepe"
+    "yeditepe",
+    "ozyegin",
+    "uskudar",
+    "tobb-etuu",
+    "cankaya",
+    "istanbul-okan",
+    "istinye",
+    "bilkent",
+    "kadir-has",
+    "izmir-economics",
+    "tobb-etuu",
 ]);
 
 const departmentLabels = {
@@ -431,7 +442,7 @@ const universities = [
             : null,
         category: "partner",
         startingPrice: getStartingPrice(departmentRanges) || "$4,000",
-        deposit: "$1000",
+        deposit: "$100",
         description: approvedDescription,
         departments: defaultDepartments,
         highlights: defaultHighlights,
