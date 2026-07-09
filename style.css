@@ -287,8 +287,8 @@ nav a:hover::after {
 
 /* University logo carousel */
 #university-logo-carousel {
-    background: var(--primary);
-    color: var(--paper);
+    background: #ffffff;
+    color: var(--text);
     overflow: hidden;
     padding: 1.1rem 0;
 }
@@ -307,35 +307,25 @@ nav a:hover::after {
 
 .university-logo-tile {
     align-items: center;
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.24);
-    border-radius: 8px;
     display: inline-flex;
     flex: 0 0 auto;
-    gap: 0.75rem;
-    min-height: 74px;
-    padding: 0.85rem 1.1rem;
-    width: 250px;
+    justify-content: center;
+    padding: 0 1.5rem;
 }
 
 .uni-logo-mark {
     align-items: center;
-    background: var(--paper);
-    clip-path: polygon(50% 0, 88% 12%, 100% 50%, 88% 88%, 50% 100%, 12% 88%, 0 50%, 12% 12%);
     color: var(--primary);
     display: inline-flex;
-    flex: 0 0 46px;
-    font-family: var(--font-heading);
-    font-size: 0.9rem;
-    height: 46px;
+    flex: 0 0 100px;
     justify-content: center;
     line-height: 1;
-    width: 46px;
+    width: 100px;
 }
 
 .uni-logo-mark img {
-    height: 30px;
-    max-width: 34px;
+    height: 80px;
+    max-width: 100%;
     object-fit: contain;
     width: auto;
 }
@@ -372,42 +362,59 @@ nav a:hover::after {
     padding-top: 4.5rem;
 }
 
-.photo-grid {
-    display: grid;
-    gap: 1.25rem;
-    grid-template-columns: 1.2fr 0.8fr;
-}
-
-.photo-card {
-    background: var(--paper);
-    border: 1px solid var(--line);
-    border-radius: var(--radius-card);
-    box-shadow: 0 12px 30px rgba(17, 24, 39, 0.08);
-    min-height: 100%;
-    overflow: hidden;
-}
-
-.photo-card.large {
-    grid-row: span 2;
-}
-
-.photo-card img {
-    aspect-ratio: 16 / 10;
-    object-fit: cover;
+.image-accordion {
+    display: flex;
     width: 100%;
+    height: 500px;
+    gap: 15px;
+    margin-top: 2rem;
 }
 
-.photo-card.large img {
-    aspect-ratio: 16 / 12.2;
+.accordion-item {
+    position: relative;
+    flex: 1;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: flex 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+    cursor: pointer;
 }
 
-.photo-card div {
-    padding: 1.35rem;
+.accordion-item:hover {
+    flex: 4;
 }
 
-.photo-card h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.35rem;
+.accordion-item img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.6s ease;
+}
+
+.accordion-item:hover img {
+    transform: scale(1.05);
+}
+
+.accordion-item h3 {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+    transition-delay: 0.1s;
+    white-space: nowrap;
+}
+
+.accordion-item:hover h3 {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .photo-card p {
@@ -1151,15 +1158,28 @@ td {
         text-align: left;
     }
 
-    .photo-grid,
+    .collage-grid,
     .about-flex,
     .partner-grid,
     .contact-grid {
         grid-template-columns: 1fr;
     }
 
-    .photo-card.large {
-        grid-row: auto;
+    .image-accordion {
+        flex-direction: column;
+        height: 700px;
+    }
+
+    .accordion-item:hover {
+        flex: 3;
+    }
+
+    .accordion-item h3 {
+        font-size: 1.5rem;
+        bottom: 20px;
+        left: 20px;
+        opacity: 1;
+        transform: none;
     }
 
     .facts-grid {

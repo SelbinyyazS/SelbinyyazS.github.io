@@ -22,6 +22,14 @@ const approvedDescription = {
     uz: "2026 yil tasdiqlangan ro'yxatidagi universitet. Yo'nalishlar, narxlar va qabul shartlari bo'yicha eng yangi ma'lumot uchun biz bilan bog'laning."
 };
 
+const partnerDescription = {
+    tk: "Bu biziň resmi hyzmatdaş uniwersitetimizdir. Bölüm, töleg we kabul şertleri barada iň soňky maglumat üçin biziň bilen habarlaşyň.",
+    tr: "Bu bizim resmi partner üniversitemizdir. Bölüm, ücret ve kabul şartları için en güncel bilgiyi bizden isteyin.",
+    en: "An official partner university. Contact us for the latest information about programs, tuition, and admission requirements.",
+    ru: "Это наш официальный университет-партнер. Свяжитесь с нами для актуальной информации о программах, стоимости и поступлении.",
+    uz: "Bu bizning rasmiy hamkor universitetimizdir. Yo'nalishlar, narxlar va qabul shartlari bo'yicha eng yangi ma'lumot uchun biz bilan bog'laning."
+};
+
 const universityLogoSlugs = {
     "Acibadem University": "acibadem",
     "Altinbas University": "altinbas",
@@ -75,6 +83,8 @@ const availableLogoSlugs = new Set([
     "kadir-has",
     "izmir-economics",
     "tobb-etuu",
+    "istanbul-gelisim",
+    "yasar"
 ]);
 
 const departmentLabels = {
@@ -442,8 +452,8 @@ const universities = [
             : null,
         category: "partner",
         startingPrice: getStartingPrice(departmentRanges) || "$4,000",
-        deposit: "$100",
-        description: approvedDescription,
+        deposit: "$1000",
+        description: (uni.name === "Bahcesehir University" || uni.name === "Istanbul Medipol University") ? approvedDescription : partnerDescription,
         departments: defaultDepartments,
         highlights: defaultHighlights,
         departmentRanges,

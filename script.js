@@ -1033,7 +1033,7 @@ function renderUniversityLogos() {
     const carouselItems = [...approvedUnis, ...approvedUnis];
 
     logoTrack.innerHTML = carouselItems.map((uni, index) => {
-        const displayName = localized(uni.displayName, lang) || uni.name;
+        const displayName = uni.name;
         const initials = getInitials(uni.name);
         const hidden = index >= approvedUnis.length ? ' aria-hidden="true"' : "";
         const logo = uni.logo || "";
@@ -1046,14 +1046,13 @@ function renderUniversityLogos() {
                         <span hidden>${escapeHTML(initials)}</span>
                     ` : `<span>${escapeHTML(initials)}</span>`}
                 </span>
-                <span class="uni-logo-name">${escapeHTML(displayName)}</span>
             </div>
         `;
     }).join("");
 }
 
 function buildPartnerCard(uni, lang) {
-    const displayName = localized(uni.displayName, lang) || uni.name;
+    const displayName = uni.name;
     const departments = localized(uni.departments, lang);
     const highlights = localized(uni.highlights, lang);
     const departmentRanges = localized(uni.departmentRanges, lang) || uni.departmentRanges || [];
